@@ -1,19 +1,19 @@
 {
   "settings": {
-    "creator": "cheon",
-    "apiName": "LOYD",
-    "description": "A free and reliable API service designed for modern application development. Built with Node.js and TypeScript, delivering fast performance, stable endpoints, and easy integration.",
-    "apiVersion": "v1.0",
+    "creator": "𝐂𝐇𝐄𝐎𝐍",
+    "apiName": "𝐋𝐎𝐘𝐃",
+    "description": "سلام عليكم انا محمد الملقب لويد ذا مشروع api كل شيء مجاني خذ منهم و مبروك عليك يحب🪻",
+    "apiVersion": "v2.0",
     "visitors": "0",
     "favicon": "/src/danzz.jpg",
     "thumbnail": "/src/IMG-20260115-WA0297.jpg",
-    "channelUrl": "https://whatsapp.com/channel/0029VbBQG1n3QxRsqN7XkS06",
-    "github": "https://github.com/DanzzAraAra"
+    "channelUrl": "https://whatsapp.com/channel/0029Vb6kG3s0AgW2lYD8ad1L",
+    "github": "https://github.com/LOYD-SOLO"
   },
   "tags": {
     "ai": [
       {
-        "name": "Kuroneko Chat",
+        "name": "𝐂𝐇𝐄𝐎𝐍 𝐂𝐇𝐀𝐓",
         "endpoint": "/api/ai/kuroneko",
         "filename": "kuroneko",
         "method": "GET",
