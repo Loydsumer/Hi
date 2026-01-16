@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KuroNeko</title>
+    <link id="favicon" rel="icon" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        mono: ['"JetBrains Mono"', 'monospace'] 
+                    },
+                    boxShadow: { 
+                        'hard': '6px 6px 0px 0px #000000',
+                        'hard-sm': '3px 3px 0px 0px #000000',
+                    },
+                    colors: {
+                        'accent': '#a855f7',
+                        'accent-hover': '#9333ea',
+                        'highlight': '#fbbf24',
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="landing-page min-h-screen flex items-center justify-center font-mono p-4 selection:bg-black selection:text-white">
+
+    <div class="bg-white border-4 border-black shadow-hard max-w-md w-full relative group transition-transform duration-300">
+        
+        <div class="bg-black text-white px-3 py-2 flex justify-between items-center border-b-4 border-black">
+            <div class="flex gap-2">
+                <div class="w-3 h-3 rounded-full bg-red-500 border border-white/20"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-400 border border-white/20"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500 border border-white/20"></div>
+            </div>
+            <div class="text-[10px] font-bold tracking-widest opacity-80">NYAWW</div>
+        </div>
+
+        <div class="p-6">
+            <div id="loader" class="flex flex-col gap-4">
+                <div class="w-full aspect-video border-2 border-black/10 skeleton"></div>
+                <div class="h-8 w-3/4 skeleton"></div>
+                <div class="h-4 w-full skeleton"></div>
+                <div class="h-4 w-2/3 skeleton"></div>
+                <div class="h-12 w-full mt-2 skeleton"></div>
+            </div>
+
+            <div id="content" class="hidden flex flex-col items-center">
+                
+                <div class="w-full aspect-video border-2 border-black bg-gray-100 mb-5 relative overflow-hidden group/image">
+                    <div class="absolute top-2 right-2 bg-highlight border-2 border-black px-2 py-0.5 z-10 text-[10px] font-bold shadow-hard-sm">
+                        REST API
+                    </div>
+                    
+                    <img id="dash-thumb" src="" alt="Thumbnail" class="w-full h-full object-cover grayscale group-hover/image:grayscale-0 transition-all duration-500 transform group-hover/image:scale-105">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/10 opacity-50 pointer-events-none"></div>
+                </div>
+
+                <div class="w-full text-left mb-6">
+                    <h1 id="dash-title" class="text-3xl font-black uppercase tracking-tighter leading-none mb-2 hover:text-accent transition-colors cursor-default"></h1>
+                    <div class="h-1 w-12 bg-black mb-3"></div>
+                    <p id="dash-desc" class="text-xs font-bold text-gray-500 leading-relaxed"></p>
+                </div>
+
+                <a href="/docs" class="w-full relative block bg-black text-white font-bold py-3.5 text-lg text-center border-2 border-black shadow-hard hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] hover:bg-accent transition-all duration-200 mb-4 group/btn">
+                    <span class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-book-open text-sm"></i> READ DOCS
+                    </span>
+                </a>
+
+                <a href="/donasi.html" class="w-full relative block bg-highlight text-black font-bold py-3 text-lg text-center border-2 border-black shadow-hard hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all duration-200 mb-6 group/btn-donate">
+                    <span class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-coins text-sm"></i> DONATION
+                    </span>
+                </a>
+
+                <div class="grid grid-cols-2 gap-4 w-full mb-6">
+                    <a id="btn-channel" href="#" target="_blank" class="flex items-center justify-center gap-2 border-2 border-black bg-white py-2.5 text-xs font-bold shadow-hard-sm hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] hover:bg-green-100 transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> CHANNEL
+                    </a>
+                    <a id="btn-source" href="#" target="_blank" class="flex items-center justify-center gap-2 border-2 border-black bg-white py-2.5 text-xs font-bold shadow-hard-sm hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] hover:bg-gray-100 transition-all">
+                        <i class="fa-brands fa-github text-lg"></i> SOURCE
+                    </a>
+                </div>
+                
+                <div class="text-[10px] font-bold w-full border-t-2 border-black/10 pt-3 flex justify-between items-center text-gray-400 uppercase">
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span id="dash-ver">v1.0</span>
+                    </div>
+                    <span>Danzz For You</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const minLoadTime = 500; 
+        const startLoad = Date.now();
+
+        fetch('/config')
+            .then(res => res.json())
+            .then(config => {
+                document.getElementById('dash-title').innerText = config.settings.apiName || 'API SERVER';
+                document.getElementById('dash-desc').innerText = config.settings.description || 'No description provided.';
+                document.getElementById('dash-ver').innerText = config.settings.apiVersion || 'v1.0';
+                
+                const btnChannel = document.getElementById('btn-channel');
+                if(config.settings.channelUrl) {
+                    btnChannel.href = config.settings.channelUrl;
+                } else {
+                    btnChannel.classList.add('opacity-50', 'pointer-events-none');
+                }
+
+                const btnSource = document.getElementById('btn-source');
+                if(config.settings.github) {
+                    btnSource.href = config.settings.github;
+                } else {
+                    btnSource.classList.add('opacity-50', 'pointer-events-none');
+                }
+
+                const thumb = config.settings.thumbnail;
+                const thumbEl = document.getElementById('dash-thumb');
+                if(thumb) {
+                    thumbEl.src = thumb;
+                } else {
+                    thumbEl.src = 'https://placehold.co/600x400/000000/FFF?text=NO+IMAGE'; 
+                }
+
+                const fav = config.settings.favicon;
+                if(fav) document.getElementById('favicon').href = fav;
+
+                const elapsed = Date.now() - startLoad;
+                const remaining = Math.max(0, minLoadTime - elapsed);
+
+                setTimeout(() => {
+                    document.getElementById('loader').classList.add('hidden');
+                    const content = document.getElementById('content');
+                    content.classList.remove('hidden');
+                    content.classList.add('animate-in', 'fade-in', 'zoom-in-95', 'duration-300');
+                }, remaining);
+            })
+            .catch(err => {
+                console.error(err);
+                const loader = document.getElementById('loader');
+                loader.innerHTML = `
+                    <div class="bg-red-100 border-2 border-red-500 p-4 text-center">
+                        <h3 class="font-bold text-red-600 mb-1">SYSTEM ERROR</h3>
+                        <p class="text-xs text-red-500">Failed to load configuration.</p>
+                    </div>
+                `;
+                loader.classList.remove('animate-pulse');
+            });
+    </script>
+</body>
+</html>
