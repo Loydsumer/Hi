@@ -1,4 +1,4 @@
-import GptService from "../../src/services/ai/gptService.js";
+import GptService from "../../src/gpt.js";
 
 export default {
   name: "GPT Chat",
